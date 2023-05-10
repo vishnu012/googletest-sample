@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 17) 
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(PROJECT_NAME GTestSample)
+project(${PROJECT_NAME} VERSION 1.0)
+
+include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+file(GLOB_RECURSE SRC_FILES src/*.cpp)
+add_executable(${PROJECT_NAME} ${SRC_FILES})
+# message(PROJECT_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
+
